@@ -30,7 +30,7 @@ class BannerController extends Controller{
         if ($request->image){
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
-            $destinationPath = 'public/uploads/banner';
+            $destinationPath = 'uploads/banner';
             $file->move($destinationPath, $filename);
             $path = 'uploads/banner/' . $filename;
             $banner->image = $path;
@@ -64,7 +64,7 @@ class BannerController extends Controller{
 
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
-            $destinationPath = 'public/uploads/banner';
+            $destinationPath = 'uploads/banner';
             $file->move($destinationPath, $filename);
             $path = 'uploads/banner/' . $filename;
             $banner->image = $path;

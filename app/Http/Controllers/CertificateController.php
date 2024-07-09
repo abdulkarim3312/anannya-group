@@ -27,7 +27,7 @@ class CertificateController extends Controller{
         if ($request->image){
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
-            $destinationPath = 'public/uploads/certificate';
+            $destinationPath = 'uploads/certificate';
             $file->move($destinationPath, $filename);
             $path = 'uploads/certificate/' . $filename;
             $certificate->image = $path;
@@ -57,7 +57,7 @@ class CertificateController extends Controller{
 
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
-            $destinationPath = 'public/uploads/certificate';
+            $destinationPath = 'uploads/certificate';
             $file->move($destinationPath, $filename);
             $path = 'uploads/certificate/' . $filename;
             $certificate->image = $path;

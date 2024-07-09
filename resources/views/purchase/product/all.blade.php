@@ -26,7 +26,7 @@
                                 <th>Catalogue</th>
                                 <th>Image</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th width="10%">Action</th>
                             </tr>
                         </thead>
                     </table>

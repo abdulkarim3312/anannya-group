@@ -30,7 +30,7 @@ class GalleryController extends Controller{
         if ($request->image){
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
-            $destinationPath = 'public/uploads/gallery';
+            $destinationPath = 'uploads/gallery';
             $file->move($destinationPath, $filename);
             $path = 'uploads/gallery/' . $filename;
             $gallery->image = $path;
@@ -53,7 +53,6 @@ class GalleryController extends Controller{
         ]);
 
         $gallery->product_id = $request->product_id;
-        //dd($request->file('image'));
         if ($request->image){
             // Upload Image
             if (file_exists($gallery->image)){
@@ -62,7 +61,7 @@ class GalleryController extends Controller{
 
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
-            $destinationPath = 'public/uploads/gallery';
+            $destinationPath = 'uploads/gallery';
             $file->move($destinationPath, $filename);
             $path = 'uploads/gallery/' . $filename;
             $gallery->image = $path;

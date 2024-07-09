@@ -29,7 +29,7 @@
                             <th>Author</th>
                             <th>Type</th>
                             <th>Status</th>
-                            <th>Action</th>
+                            <th width="15%">Action</th>
                         </tr>
                         </thead>
 

@@ -4,6 +4,7 @@
 /storage/*.key
 /public/upload
 /public/uploads
+/public/public/uploads
 /public/uploaded_files
 /vendor
 .env
